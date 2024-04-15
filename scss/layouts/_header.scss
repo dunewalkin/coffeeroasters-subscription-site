@@ -8,3 +8,10 @@
 .primary-navigation {
    @include flexbox(row, flex-start, center, 2.06rem);
 }
+
+.primary-navigation a {
+   &:hover,
+   &:focus {
+      color: var(--clr-primary-3);
+   }
+}

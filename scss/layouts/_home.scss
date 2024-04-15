@@ -8,6 +8,9 @@
    @include flexbox(column, flex-start, flex-start, 3.5rem);
    border-radius: var(--primary-radius);
    background-image: url(../../assets/images/home/desktop/image-hero-coffeepress.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
 }
 
 .hero-content {
@@ -28,14 +31,18 @@
 
 .collection-wrapper {
    // margin-top: 16.37rem;
-   // @include width-height(100%, auto);
-   @include width-height(100%, 32.8125rem);
+   @include width-height(100%, auto);
+   // @include width-height(100%, 32.8125rem);
    @include flexbox(column, flex-start, center, 0);
    margin-top: 8.5rem;
    margin-bottom: 13rem;
-   position: relative;
+   // padding-block: 8.5rem 13rem;
+   // position: relative;
    padding-inline: var(--extra-padding);
-
+   // background-image: url(../../assets/images/home/desktop/collection.png);
+   // background-repeat: no-repeat;
+   // background-position: center top; 
+   // background-size: 100%;
 }
 
 .collection-header {
@@ -47,12 +54,24 @@
 }
 
 .collection {
-   @include position(absolute, 8.87rem, auto, auto, auto);
-   @include flexbox(row, space-between, flex-start, 0);
+   // @include position(absolute, 8.87rem, auto, auto, auto);
+   @include flexbox(row, space-between, flex-start, 1rem);
    @include width-height(100%, auto);
-   padding-inline: var(--extra-padding);
-}
+   // padding-inline: var(--extra-padding);
+   // padding-block: 16rem 13rem;
+   padding-top: 6.8rem;
+   position: relative;
+   // padding-inline: var(--extra-padding);
+   background-image: url(../../assets/images/home/desktop/collection.png);
+   background-repeat: no-repeat;
+   background-position: center top; 
+   background-size: 100%;
 
+   @include mq(large) {
+      @include flexbox(column, space-between, flex-start, 1rem);
+   }
+}
+//new
 .collection-item {
    @include width-height(100%, auto);
    max-width: 15.9375rem;
@@ -127,9 +146,10 @@
 // How it works
 
 .how-it-works-wrapper {
-   margin-bottom: 12.5rem;
+   @include width-height(100%, auto);
    @include flexbox(column, flex-start, flex-start, 0);
    padding-inline: var(--extra-padding);
+   margin-bottom: 12.5rem;
 }
 
 .how-it-works-wrapper h5 {
@@ -139,13 +159,15 @@
 
 .how-it-works-list {
    position: relative;
-   @include flexbox(row, flex-start, flex-start, 5.94rem);
+   @include width-height(100%, auto);
+   max-width: 65.3125rem;
+   @include flexbox(row, space-between, flex-start, 2rem);
    margin-bottom: 4rem;
 
    &::after {
       content: '';
       @include position(absolute, 0.9687rem, auto, auto, 0);
-      @include width-height(calc(100% - 17.8125rem), 1px);
+      @include width-height(calc(100% - var(--item-width)), 1px);
       background: var(--clr-primary-2);
       z-index: -1;
    }
@@ -173,24 +195,4 @@
    margin-block: 2.37rem 2.62rem;
 }
 
-// Footer
 
-.footer {
-   padding-block: 3rem;
-   @include flexbox(row, space-between, center, 0);
-   background: var(--clr-neutral-3);
-   margin-bottom: 5.5rem;
-   padding-inline: var(--extra-padding);
-}
-
-.footer-main {
-   @include flexbox(row, flex-start, center, 6.43rem);
-}
-
-.footer-icon {
-   height: 1.625rem;
-}
-
-.social-media {
-   @include flexbox(row, flex-start, center, 1.5rem);
-}

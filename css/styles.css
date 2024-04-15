@@ -24,6 +24,7 @@
 
 * {
   margin: 0;
+  transition: 0.2s ease;
 }
 
 body {
@@ -169,6 +170,9 @@ body {
   gap: 3.5rem;
   border-radius: var(--primary-radius);
   background-image: url(../../assets/images/home/desktop/image-hero-coffeepress.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-content {
@@ -191,7 +195,7 @@ body {
 
 .collection-wrapper {
   width: 100%;
-  height: 32.8125rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -199,7 +203,6 @@ body {
   gap: 0;
   margin-top: 8.5rem;
   margin-bottom: 13rem;
-  position: relative;
   padding-inline: var(--extra-padding);
 }
 
@@ -214,19 +217,28 @@ body {
 }
 
 .collection {
-  position: absolute;
-  top: 8.87rem;
-  right: auto;
-  bottom: auto;
-  left: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 0;
+  gap: 1rem;
   width: 100%;
   height: auto;
-  padding-inline: var(--extra-padding);
+  padding-top: 6.8rem;
+  position: relative;
+  background-image: url(../../assets/images/home/desktop/collection.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+}
+@media (max-width: 70em) {
+  .collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
 
 .collection-item {
@@ -330,13 +342,15 @@ body {
 }
 
 .how-it-works-wrapper {
-  margin-bottom: 12.5rem;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
   padding-inline: var(--extra-padding);
+  margin-bottom: 12.5rem;
 }
 
 .how-it-works-wrapper h5 {
@@ -346,11 +360,14 @@ body {
 
 .how-it-works-list {
   position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 65.3125rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 5.94rem;
+  gap: 2rem;
   margin-bottom: 4rem;
 }
 .how-it-works-list::after {
@@ -360,7 +377,7 @@ body {
   right: auto;
   bottom: auto;
   left: 0;
-  width: calc(100% - 17.8125rem);
+  width: calc(100% - var(--item-width));
   height: 1px;
   background: var(--clr-primary-2);
   z-index: -1;
@@ -390,6 +407,27 @@ body {
   margin-block: 2.37rem 2.62rem;
 }
 
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding-block: 2.6875rem;
+}
+
+.primary-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.06rem;
+}
+
+.primary-navigation a:hover, .primary-navigation a:focus {
+  color: var(--clr-primary-3);
+}
+
 .footer {
   padding-block: 3rem;
   display: flex;
@@ -410,6 +448,10 @@ body {
   gap: 6.43rem;
 }
 
+.footer-main a:hover, .footer-main a:focus {
+  color: var(--clr-neutral-1);
+}
+
 .footer-icon {
   height: 1.625rem;
 }
@@ -422,21 +464,11 @@ body {
   gap: 1.5rem;
 }
 
-.header-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  padding-block: 2.6875rem;
+.social-media svg {
+  fill: var(--clr-neutral-1);
 }
-
-.primary-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2.06rem;
+.social-media svg:hover, .social-media svg:focus {
+  fill: var(--clr-primary-2);
 }
 
 /*# sourceMappingURL=styles.css.map */
