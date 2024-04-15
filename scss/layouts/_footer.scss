@@ -9,7 +9,7 @@
 }
 
 .footer-main {
-   @include flexbox(row, flex-start, center, 6.43rem);
+   @include flexbox(row, flex-start, center, clamp(3rem, 7vw, 6.43rem));
 }
 
 .footer-main a {
