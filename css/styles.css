@@ -445,7 +445,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 6.43rem;
+  gap: clamp(3rem, 7vw, 6.43rem);
 }
 
 .footer-main a:hover, .footer-main a:focus {
