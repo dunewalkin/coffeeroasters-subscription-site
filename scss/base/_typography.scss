@@ -1,0 +1,77 @@
+@use '../abstracts/mixins' as *;
+
+.heading-xl {
+   font-family: Fraunces;
+   font-size: 9.375rem;
+   font-style: normal;
+   font-weight: 900;
+   line-height: 4.5rem;
+   // color: var(--clr-neutral-2);
+}
+
+.heading-l {
+   font-family: Fraunces;
+   font-size: 4.5rem;
+   font-style: normal;
+   font-weight: 900;
+   line-height: 4.5rem;
+   // color: var(--clr-primary-3);
+}
+
+.heading-m-plus {
+   font-family: Fraunces;
+   font-size: 2.5rem;
+   font-style: normal;
+   font-weight: 900;
+   line-height: 3rem; /* 120% */
+   // color: var(--clr-neutral-1)
+}
+
+
+.heading-m {
+   font-family: Fraunces;
+   font-size: 2rem;
+   font-style: normal;
+   font-weight: 900;
+   line-height: 2.25rem; 
+   // color: var(--clr-primary-3);
+}
+
+.heading-s {
+   font-family: Fraunces;
+   font-size: 1.5rem;
+   font-style: normal;
+   font-weight: 900;
+   line-height: 2rem; 
+   // color: var(--clr-primary-3);
+}
+
+.heading-xs {
+   font-family: Fraunces;
+   font-size: 1.125rem;
+   font-style: normal;
+   font-weight: 900;
+   line-height: 1.5625rem;
+   // color: var(--clr-neutral-1);
+}
+
+p {
+   font-family: Barlow;
+   font-size: 1rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.625rem;
+   // color: var(--clr-neutral-1);
+   // opacity: 0.8;
+}
+
+.nav-text {
+   font-family: Barlow;
+   font-size: 0.75rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 0.9375rem; /* 125% */
+   letter-spacing: 0.05769rem;
+   text-transform: uppercase;
+   color: var(--clr-neutral-2);
+}

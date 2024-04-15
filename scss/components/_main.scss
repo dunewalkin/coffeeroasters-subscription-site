@@ -1,0 +1,9 @@
+@use "../abstracts/mixins" as *;
+
+body {
+   padding-inline: 5rem;
+   background: var(--clr-neutral-4);
+}
+
+
+

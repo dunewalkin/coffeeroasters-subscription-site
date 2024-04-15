@@ -1,0 +1,10 @@
+@use "../abstracts/mixins" as *;
+
+.header-wrapper {
+   @include flexbox(row, space-between, center, 0);
+   padding-block: 2.6875rem;
+}
+
+.primary-navigation {
+   @include flexbox(row, flex-start, center, 2.06rem);
+}
