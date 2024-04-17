@@ -3,6 +3,10 @@
 body {
    padding-inline: 5rem;
    background: var(--clr-neutral-4);
+
+   @include mq(large) {
+      padding-inline: 2.44rem;   
+   }
 }
 
 
