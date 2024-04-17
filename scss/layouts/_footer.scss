@@ -6,10 +6,20 @@
    background: var(--clr-neutral-3);
    margin-bottom: 5.5rem;
    padding-inline: var(--extra-padding);
+
+   @include mq(large) {
+      padding-block: 3.37rem;
+      margin-bottom: 4.5rem;
+      @include flexbox(column, center, center, 4.06rem);
+   }
 }
 
 .footer-main {
    @include flexbox(row, flex-start, center, clamp(3rem, 7vw, 6.43rem));
+
+   @include mq(large) {
+      @include flexbox(column, center, center, 2rem);
+   }
 }
 
 .footer-main a {

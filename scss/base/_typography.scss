@@ -6,7 +6,6 @@
    font-style: normal;
    font-weight: 900;
    line-height: 4.5rem;
-   // color: var(--clr-neutral-2);
 }
 
 .heading-l {
@@ -15,7 +14,11 @@
    font-style: normal;
    font-weight: 900;
    line-height: 4.5rem;
-   // color: var(--clr-primary-3);
+
+   @include mq(large) {
+      font-size: 3rem;
+      line-height: 3rem; 
+   }
 }
 
 .heading-m-plus {
@@ -24,7 +27,10 @@
    font-style: normal;
    font-weight: 900;
    line-height: 3rem; /* 120% */
-   // color: var(--clr-neutral-1)
+
+   @include mq(large) {
+      font-size: 2rem;
+   }
 }
 
 
@@ -34,7 +40,11 @@
    font-style: normal;
    font-weight: 900;
    line-height: 2.25rem; 
-   // color: var(--clr-primary-3);
+
+   @include mq(large) {
+      font-size: 1.75rem;
+      line-height: 2rem;
+   }
 }
 
 .heading-s {
@@ -43,7 +53,6 @@
    font-style: normal;
    font-weight: 900;
    line-height: 2rem; 
-   // color: var(--clr-primary-3);
 }
 
 .heading-xs {
@@ -52,7 +61,6 @@
    font-style: normal;
    font-weight: 900;
    line-height: 1.5625rem;
-   // color: var(--clr-neutral-1);
 }
 
 p {
@@ -61,8 +69,11 @@ p {
    font-style: normal;
    font-weight: 400;
    line-height: 1.625rem;
-   // color: var(--clr-neutral-1);
-   // opacity: 0.8;
+
+   @include mq(large) {
+      font-size: 0.9375rem;
+      line-height: 1.5625rem;
+   }
 }
 
 .nav-text {
