@@ -7,6 +7,11 @@ body {
    @include mq(large) {
       padding-inline: 2.44rem;   
    }
+
+   @include mq(small) {
+      padding-inline: 1.5rem; 
+      padding-top: 6rem;
+   }
 }
 
 

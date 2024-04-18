@@ -6,18 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
    
-  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+  <title>Coffeeroasters subscription site</title>
 </head>
 
 <body>
 
-   <header class="header-wrapper">
-      <div class="header-logo">
-         <img src="./assets/images/shared/desktop/logo.svg" alt="Logo Icon">
+   <header class="header-wrapper" data-visible="false">
+      <div class="header-top" >
+         <div class="header-logo">
+            <img src="./assets/images/shared/desktop/logo.svg" alt="Logo Icon">
+         </div>
+   
+         <button class="mobile-nav-toggle" 
+            aria-controls="primary-navigation" aria-expanded="false">
+         </button>
       </div>
+
       <nav>
-         <ul class="primary-navigation">
+         <ul class="primary-navigation header-navigation" data-visible="false">
             <li class="nav-item">
                <a href="index.html" class="nav-text">Home</a>
             </li>

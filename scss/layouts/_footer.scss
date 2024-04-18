@@ -12,6 +12,11 @@
       margin-bottom: 4.5rem;
       @include flexbox(column, center, center, 4.06rem);
    }
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 3.03rem);
+      padding-inline: 1.5rem;
+   }
 }
 
 .footer-main {
@@ -19,6 +24,12 @@
 
    @include mq(large) {
       @include flexbox(column, center, center, 2rem);
+   }
+}
+
+.footer-navigation {
+   @include mq(small) {
+      @include flexbox(column, center, center, 1.5rem);
    }
 }
 
@@ -30,7 +41,7 @@
 }
 
 .footer-icon {
-   height: 1.625rem;
+   @include width-height(14.75rem, auto);
 }
 
 .social-media {

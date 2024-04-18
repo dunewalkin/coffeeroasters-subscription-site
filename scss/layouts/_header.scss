@@ -1,17 +1,102 @@
 @use "../abstracts/mixins" as *;
 
 .header-wrapper {
+   width: 100%;
    @include flexbox(row, space-between, center, 0);
    padding-block: 2.6875rem;
+
+   @include mq(small) {
+      @include position(absolute, 0, 0, auto, auto);
+      padding-block: 0;
+      padding-inline: 1.5rem;
+   }
+}
+
+.header-top {
+
+   @include mq(small) {
+      width: 100%;
+      @include flexbox(row, space-between, center, 0);
+      padding-block: 2rem 2.56rem;
+   }
+   
+}
+
+.header-wrapper[data-visible="true"] {
+   @include position(fixed, 0, 0, auto, 0);
+   background: var(--clr-neutral-4);
+   z-index: 999;
+}
+
+.header-logo {
+   @include mq(small) {
+      @include width-height(10.1875rem, auto);
+   }
 }
 
 .primary-navigation {
-   @include flexbox(row, flex-start, center, 2.06rem);
+   @include flexbox(row, flex-start, center, clamp(1rem, 2vw, 2.06rem));
+}
+
+.header-navigation {
+   @include mq(small) {
+      display: none;
+   }
+}
+
+.header-navigation[data-visible="true"] {
+   @include mq(small) {
+      display: block; 
+      @include position(fixed, 5.72rem, 0, auto, 0);
+      @include width-height(100%, 100vh);
+      @include flexbox(column, flex-start, center, 2rem);
+      padding-top: 2.5rem;
+      z-index: 999;
+      background: linear-gradient(0deg, rgba(254, 252, 247, 0.50) 0%, #FEFCF7 55.94%);  
+   }
+}
+
+.header-navigation {
+   .nav-text {
+      @include mq(small) {
+         font-family: Fraunces;
+         font-size: 1.5rem;
+         font-style: normal;
+         font-weight: 900;
+         line-height: 2rem; 
+         color: var(--clr-primary-3);
+      }
+   }
 }
 
 .primary-navigation a {
+
+   @include mq(small) {
+      z-index: 10;
+   }
+
    &:hover,
    &:focus {
       color: var(--clr-primary-3);
    }
+}
+
+.mobile-nav-toggle {
+   display: none;
+
+   @include mq (small) {
+      display: block;
+      @include width-height(1rem, 0.9375rem);
+      // @include position(absolute, 2.1rem, 0, auto, auto);
+      background-image: url(../../assets/images/shared/mobile/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: none;
+      z-index: 20;
+   }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+   @include width-height(0.875rem, 0.8125rem);
+   background-image: url(../../assets/images/shared/mobile/icon-close.svg);
 }

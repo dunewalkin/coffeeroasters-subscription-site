@@ -7,24 +7,31 @@
    <link rel="stylesheet" href="./css/styles.css">
    <script src="./js/main.js" defer></script>
    
-   <title>Frontend Mentor | Coffeeroasters subscription site</title>
+   <title>Coffeeroasters subscription site</title>
 </head>
 <body>
 
-   <header class="header-wrapper">
-      <div class="header-logo">
-         <img src="./assets/images/shared/desktop/logo.svg" alt="Logo Icon">
+   <header class="header-wrapper" data-visible="false">
+      <div class="header-top" >
+         <div class="header-logo">
+            <img src="./assets/images/shared/desktop/logo.svg" alt="Logo Icon">
+         </div>
+   
+         <button class="mobile-nav-toggle" 
+            aria-controls="primary-navigation" aria-expanded="false">
+         </button>
       </div>
+
       <nav>
-         <ul class="primary-navigation">
+         <ul class="primary-navigation header-navigation" data-visible="false">
             <li class="nav-item">
-               <a href="#" class="nav-text">Home</a>
+               <a href="index.html" class="nav-text">Home</a>
             </li>
             <li class="nav-item">
-               <a href="#" class="nav-text">About us</a>
+               <a href="about.html" class="nav-text">About us</a>
             </li>
             <li class="nav-item">
-               <a href="#" class="nav-text">Create your plan</a>
+               <a href="plan.html" class="nav-text">Create your plan</a>
             </li>
          </ul>
       </nav>
@@ -38,7 +45,7 @@
          <p>Start your mornings with the world’s best coffees. Try our expertly curated artisan 
             coffees from our best roasters delivered directly to your door, at your schedule.</p>
       </div>
-      <a href="#" class="hero-btn">
+      <a href="plan.html" class="hero-btn">
          <h6 class="heading-xs">Create your plan</h6>
       </a>
    </section>
@@ -50,7 +57,9 @@
       <ul class="collection">
 
          <li class="collection-item">
-            <img src="./assets/images/home/desktop/image-gran-espresso.png" alt="Gran Espresso Image">
+            <div class="collection-pic-wrapper">
+               <img src="./assets/images/home/desktop/image-gran-espresso.png" alt="Gran Espresso Image">
+            </div>
             <div class="collection-content">
                <h3 class="heading-s">Gran Espresso</h3>
                <p>Light and flavorful blend with cocoa and black pepper for an intense experience</p>
@@ -58,7 +67,9 @@
          </li>
 
          <li class="collection-item">
-            <img src="./assets/images/home/desktop/image-planalto.png" alt="Planalto Image">
+            <div class="collection-pic-wrapper">
+               <img src="./assets/images/home/desktop/image-planalto.png" alt="Planalto Image">
+            </div>
             <div class="collection-content">
                <h5 class="heading-s">Planalto</h5>
                <p>Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.</p>
@@ -66,7 +77,9 @@
          </li>
 
          <li class="collection-item">
-            <img src="./assets/images/home/desktop/image-piccollo.png" alt="Piccollo Image">
+            <div class="collection-pic-wrapper">
+               <img src="./assets/images/home/desktop/image-piccollo.png" alt="Piccollo Image">
+            </div>
             <div class="collection-content">
                <h5 class="heading-s">Piccollo</h5>
                <p>Mild and smooth blend featuring notes of toasted almond and dried cherry</p>
@@ -74,7 +87,9 @@
          </li>
 
          <li class="collection-item">
-            <img src="./assets/images/home/desktop/image-danche.png" alt="Danche Image">
+            <div class="collection-pic-wrapper">
+               <img src="./assets/images/home/desktop/image-danche.png" alt="Danche Image">
+            </div>
             <div class="collection-content">
                <h5 class="heading-s">Danche</h5>
                <p>Ethiopian hand-harvested blend densely packed with vibrant fruit notes.</p>
@@ -172,18 +187,19 @@
    <footer class="footer">
 
       <div class="footer-main">
+
          <img class="footer-icon" src="./assets/images/shared/desktop/logo-light.png" alt="Logo icon">
 
          <nav>
-            <ul class="primary-navigation">
+            <ul class="footer-navigation primary-navigation">
                <li class="nav-item">
-                  <a href="#" class="nav-text">Home</a>
+                  <a href="index.html" class="nav-text">Home</a>
                </li>
                <li class="nav-item">
-                  <a href="#" class="nav-text">About us</a>
+                  <a href="about.html" class="nav-text">About us</a>
                </li>
                <li class="nav-item">
-                  <a href="#" class="nav-text">Create your plan</a>
+                  <a href="plan.html" class="nav-text">Create your plan</a>
                </li>
             </ul>
          </nav>

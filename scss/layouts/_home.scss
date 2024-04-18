@@ -3,7 +3,6 @@
 //Hero
 
 .hero {
-   // height: 37.5rem;
    padding: 7.31rem 5.31rem;
    @include flexbox(column, flex-start, flex-start, 3.5rem);
    border-radius: var(--primary-radius);
@@ -17,6 +16,12 @@
       @include flexbox(column, flex-start, flex-start, 2.5rem);
       background-image: url(../../assets/images/home/tablet/image-hero-coffeepress.jpg);
    }
+
+   @include mq(small) {
+      padding: 6.25rem 1.5rem 6.19rem;
+      @include flexbox(column, flex-start, center, 2.44rem);
+      background-image: url(../../assets/images/home/mobile/image-hero-coffeepress.jpg);
+   }
 }
 
 .hero-content {
@@ -27,11 +32,19 @@
       max-width: 24.875rem;
       @include flexbox(column, flex-start, flex-start, 1.5rem);
    }
+
+   @include mq(small) {
+      @include flexbox(column, flex-start, center, 1.5rem);
+   }
 }
 
 .hero-content h2,
 .hero-content p {
    color: var(--clr-neutral-1);
+
+   @include mq(small) {
+      text-align: center;
+   }
 }
 
 .hero-content p {
@@ -43,13 +56,16 @@
 .collection-wrapper {
    @include width-height(100%, auto);
    @include flexbox(column, flex-start, center, 0);
-   margin-top: 8.5rem;
-   margin-bottom: 13rem;
+   margin-block: 8.5rem 13rem;
    padding-inline: var(--extra-padding);
 
    @include mq(large) {
       padding-inline: 0;
       margin-bottom: 9rem;
+   }
+
+   @include mq(small) {
+      margin-block: 7.5rem;
    }
 }
 
@@ -62,6 +78,10 @@
 
    @include mq(large) {
       @include width-height(14.67638rem, auto);
+   }
+
+   @include mq(small) {
+      @include width-height(12.51813rem, auto);
    }
 }
 
@@ -78,6 +98,11 @@
       @include flexbox(column, flex-start, center, 2rem);
       padding-top: clamp(2rem, 12vw, 12rem);
    }
+
+   @include mq(small) {
+      @include flexbox(column, flex-start, center, 3rem);
+      padding-top: clamp(5rem, 20vw, 7rem);
+   }
 }
 
 .collection-item {
@@ -87,7 +112,11 @@
 
    @include mq(large) {
       max-width: none;
-      @include flexbox(row, center, center, 2.19rem);
+      @include flexbox(row, center, center, clamp(0.5rem, 3vw, 2.19rem));
+   }
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 1.5rem);
    }
 }
 
@@ -98,6 +127,10 @@
    @include mq(large) {
       max-width: 17.625rem;
       @include flexbox(column, flex-start, center, 2rem);
+   }
+
+   @include mq(small) {
+      @include flexbox(column, flex-start, center, 1rem);
    }
 }
 
@@ -122,12 +155,20 @@
       padding-top: 3.6rem;
       margin-bottom: 27.18rem;
    }
+
+   @include mq(small) {
+      @include width-height(100%,  56.375rem);
+      padding-top: 5rem;
+      margin-bottom: 45rem;
+   }
+
 }
 
 .benefits-header {
    @include width-height(100%, auto);
    max-width: 33.75rem;
    @include flexbox(column, flex-start, center, 2rem);
+   padding-inline: 1.5rem;
 
    @include mq(large) {
       @include flexbox(column, flex-start, center, 1.5rem);
@@ -159,6 +200,11 @@
       padding-inline: 3.56rem;
       width: 100%;
    }
+
+   @include mq(small) {
+      @include position(absolute, 20rem, auto, auto, auto);
+      padding-inline: 1.5rem;
+   }
 }
 
 .benefit-item {
@@ -178,7 +224,18 @@
       justify-items: flex-start;
       gap: 3.44rem;
       padding-block: 2.56rem;
-      padding-inline: 4.37rem 3rem;
+      padding-inline: clamp(2.5rem, 5vw, 4.37rem) clamp(1.5rem, 4vw, 3rem);
+      width: 100%;
+   }
+
+   @include mq(small) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 4.5rem 1fr;
+      align-items: center;
+      justify-items: center;
+      gap: 3.5rem;
+      padding-block: 4.5rem 3.5rem;
+      padding-inline: 0.75rem;
       width: 100%;
    }
 }
@@ -190,6 +247,10 @@
 
    @include mq(large) {
       @include width-height(3.5rem, auto);
+   }
+
+   @include mq(small) {
+      @include width-height(4.5rem, auto);
    }
 }
 
@@ -204,6 +265,17 @@
       @include flexbox(column, flex-start, flex-start, 1rem);
       padding-inline: 0;
       text-align: start;
+   }
+
+   @include mq(small) {
+      @include flexbox(column, flex-start, center, 1rem);
+      text-align: center;
+   }
+}
+
+.benefit-content p {
+   @include mq(small) {
+      padding-inline: 1.34rem;
    }
 }
 
@@ -224,6 +296,11 @@
       margin-bottom: 9rem;
       padding-inline: 0;
    }
+
+   @include mq(small) {
+      margin-bottom: 7.5rem;
+      @include flexbox(column, flex-start, center, 0);
+   }
 }
 
 .how-it-works-wrapper h5 {
@@ -232,6 +309,10 @@
 
    @include mq(large) {
       margin-bottom: 2.5rem;
+   }
+
+   @include mq(small) {
+      margin-bottom: 5rem;
    }
 }
 
@@ -246,12 +327,20 @@
       @include flexbox(row, space-between, normal, clamp(0.63rem, 2vw, 2rem));
    }
 
+   @include mq(small) {
+      @include flexbox(column, center, center, 3.5rem);
+   }
+
    &::after {
       content: '';
       @include position(absolute, 0.9687rem, auto, auto, 0);
       @include width-height(calc(100% - var(--item-width)), 1px);
       background: var(--clr-primary-2);
       z-index: -1;
+
+      @include mq(small) {
+         display: none;
+      }
    }
 }
 
@@ -261,6 +350,10 @@
    @include flexbox(column, flex-start, flex-start, 0);
    flex: 1 1 100%; 
 
+   @include mq(small) {
+      @include flexbox(column, flex-start, center, 0);
+      max-width: 28rem;
+   }
 }
 
 .circle-item {
@@ -273,6 +366,10 @@
    @include mq(large) {
       margin-bottom: 3rem;
    }
+
+   @include mq(small) {
+      display: none;
+   }
 }
 
 .how-it-works-item h2 {
@@ -280,6 +377,11 @@
 
    @include mq(large) {
       font-size: 4.5rem;
+      line-height: 4.5rem;
+   }
+
+   @include mq(small) {
+      text-align: center;
    }
 }
 
@@ -289,6 +391,17 @@
 
    @include mq(large) {
       margin-block: 2.37rem 2.75rem;
+   }
+
+   @include mq(small) {
+      text-align: center;
+      margin-block: 1.5rem;
+   }
+}
+
+.how-it-works-item p {
+   @include mq(small) {
+      text-align: center;
    }
 }
 

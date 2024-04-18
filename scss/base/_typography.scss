@@ -19,6 +19,11 @@
       font-size: 3rem;
       line-height: 3rem; 
    }
+
+   @include mq(small) {
+      font-size: 2.5rem;
+      line-height: 2.5rem; 
+   }
 }
 
 .heading-m-plus {
@@ -30,6 +35,10 @@
 
    @include mq(large) {
       font-size: 2rem;
+   }
+
+   @include mq(small) {
+      font-size: 1.75rem;
    }
 }
 
