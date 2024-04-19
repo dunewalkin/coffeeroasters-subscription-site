@@ -12,20 +12,18 @@
    }
 }
 
-.header-top {
-
-   @include mq(small) {
-      width: 100%;
-      @include flexbox(row, space-between, center, 0);
-      padding-block: 2rem 2.56rem;
-   }
-   
-}
-
 .header-wrapper[data-visible="true"] {
    @include position(fixed, 0, 0, auto, 0);
    background: var(--clr-neutral-4);
    z-index: 999;
+}
+
+.header-top {
+   @include mq(small) {
+      width: 100%;
+      @include flexbox(row, space-between, center, 0);
+      padding-block: 2rem 2.56rem;
+   }  
 }
 
 .header-logo {
@@ -38,10 +36,19 @@
    @include flexbox(row, flex-start, center, clamp(1rem, 2vw, 2.06rem));
 }
 
-.header-navigation {
+.header-navigation,
+.primary-navigation {
    @include mq(small) {
-      display: none;
+      z-index: -1;
+      @include position(fixed, 5.72rem, 0, auto, 0);
+      @include width-height(100%, 100vh);
+      @include flexbox(column, flex-start, center, 2rem);
+      padding-top: 2.5rem;
+      transition: opacity .5s ease; /* Добавляем transition для свойства opacity */
+      opacity: 0;
    }
+
+   
 }
 
 .header-navigation[data-visible="true"] {
@@ -51,9 +58,15 @@
       @include width-height(100%, 100vh);
       @include flexbox(column, flex-start, center, 2rem);
       padding-top: 2.5rem;
-      z-index: 999;
+      z-index: 100;
+      opacity: 1;
       background: linear-gradient(0deg, rgba(254, 252, 247, 0.50) 0%, #FEFCF7 55.94%);  
    }
+}
+
+.header-navigation[data-visible="false"] {
+   opacity: 0; /* Мгновенное исчезновение при изменении атрибута data-visible */
+   transition: opacity 0.1s ease; /* Мгновенное изменение прозрачности */
 }
 
 .header-navigation {
