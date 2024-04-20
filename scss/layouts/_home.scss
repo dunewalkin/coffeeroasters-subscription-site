@@ -2,14 +2,11 @@
 
 //Hero
 
-.hero {
+.hero-home {
    padding: 7.31rem 5.31rem;
    @include flexbox(column, flex-start, flex-start, 3.5rem);
-   border-radius: var(--primary-radius);
    background-image: url(../../assets/images/home/desktop/image-hero-coffeepress.jpg);
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
+  
 
    @include mq(large) {
       padding: 6.5rem 3.62rem;
@@ -203,7 +200,7 @@
 
    @include mq(small) {
       @include position(absolute, 20rem, auto, auto, auto);
-      padding-inline: 1.5rem;
+      padding-inline: var(--inline-small);
    }
 }
 

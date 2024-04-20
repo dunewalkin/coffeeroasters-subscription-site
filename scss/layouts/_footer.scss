@@ -15,7 +15,7 @@
 
    @include mq(small) {
       @include flexbox(column, center, center, 3.03rem);
-      padding-inline: 1.5rem;
+      padding-inline: var(--inline-small);
    }
 }
 

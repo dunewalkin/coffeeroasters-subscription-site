@@ -8,7 +8,7 @@
    @include mq(small) {
       @include position(absolute, 0, 0, auto, auto);
       padding-block: 0;
-      padding-inline: 1.5rem;
+      padding-inline: var(--inline-small);
    }
 }
 
@@ -36,8 +36,7 @@
    @include flexbox(row, flex-start, center, clamp(1rem, 2vw, 2.06rem));
 }
 
-.header-navigation,
-.primary-navigation {
+.header-navigation {
    @include mq(small) {
       z-index: -1;
       @include position(fixed, 5.72rem, 0, auto, 0);
@@ -65,8 +64,11 @@
 }
 
 .header-navigation[data-visible="false"] {
-   opacity: 0; /* Мгновенное исчезновение при изменении атрибута data-visible */
-   transition: opacity 0.1s ease; /* Мгновенное изменение прозрачности */
+   @include mq(small) {
+      opacity: 0; 
+      transition: opacity 0.1s ease; 
+   }
+   
 }
 
 .header-navigation {
@@ -100,7 +102,6 @@
    @include mq (small) {
       display: block;
       @include width-height(1rem, 0.9375rem);
-      // @include position(absolute, 2.1rem, 0, auto, auto);
       background-image: url(../../assets/images/shared/mobile/icon-hamburger.svg);
       background-repeat: no-repeat;
       background-color: transparent;

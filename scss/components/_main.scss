@@ -9,9 +9,16 @@ body {
    }
 
    @include mq(small) {
-      padding-inline: 1.5rem; 
+      padding-inline: var(--inline-small); 
       padding-top: 6rem;
    }
+}
+
+.hero {
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   border-radius: var(--primary-radius);
 }
 
 

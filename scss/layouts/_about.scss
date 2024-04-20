@@ -1,0 +1,217 @@
+@use "../abstracts/mixins" as *;
+
+//Hero
+
+.hero-about {
+   padding: 8.56rem 5.31rem;
+   @include flexbox(column, flex-start, flex-start, 0);
+   border-radius: var(--primary-radius);
+   background-image: url(../../assets/images/about/desktop/image-hero-whitecup.jpg);
+   margin-bottom: 10.5rem;
+
+   @include mq(medium) {
+      padding: 7.37rem 3.62rem;
+      background-image: url(../../assets/images/about/tablet/image-hero-whitecup.jpg);
+   }
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 0);
+      padding: 6.94rem var(--inline-small) 5.44rem;
+      background-image: url(../../assets/images/about/mobile/image-hero-whitecup.jpg);
+   }
+}
+
+.hero-about-content {
+   @include flexbox(column, flex-start, flex-start, 1.5rem);
+   width: 100%;
+   max-width: 27.8125rem;
+
+   @include mq(medium) {
+      max-width: 24.875rem;
+   }
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 1.5rem);
+   }
+}
+
+.hero-about-content h3,
+.hero-about-content p {
+   color: var(--clr-neutral-1);
+
+   @include mq(small) {
+      text-align: center;
+   }
+}
+
+// Commitment
+
+.commitment-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   gap: 4.31rem;
+   margin-bottom: 15rem;
+   padding-inline: var(--extra-padding);
+
+   @include mq(medium) {
+      padding-inline: 0;
+      gap: clamp(2.5rem, 5vw, 4.31rem);
+   }
+
+   @include mq(small) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+   }
+}
+
+.commitment-pic {
+   @include flexbox(column, center, center, 0);
+}
+
+.commitment-pic img { 
+   border-radius: 0.5rem;
+}
+
+.commitment-content {
+   @include flexbox(column, flex-start, flex-start, 1.88rem);
+   width: 100%;
+   max-width: 33.75rem;
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 1.88rem);
+      text-align: center;
+   }
+}
+
+.commitment-content h3 {
+   @include mq(medium) {
+      font-size: 2rem;
+   }
+}
+
+//Quality
+
+.quality-section {
+   width: 100%;
+   padding: 5.5rem 5.3rem 11rem;
+   background-color: var(--clr-neutral-3);
+   border-radius: var(--primary-radius);
+   margin-bottom: 10.5rem;
+
+   @include mq(large) {
+      padding: 0 5.3rem 0;
+   }
+
+   @include mq(small) {
+      padding: 0 var(--inline-small) 0;
+   }
+}
+
+.quality-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+
+   @include mq(large) {
+      padding-block: 14rem 4.5rem;
+      position: relative;
+      @include flexbox(column-reverse, center, normal, 0);      
+   }
+
+   @include mq(small) {
+      padding-block:6.5rem 4.5rem;
+   }
+}
+
+.quality-content {
+   max-width: 33.75rem;
+   @include flexbox(column, flex-start, flex-start, 2rem);
+
+   @include mq(large) {
+      max-width: none;
+      width: 100%;
+      @include flexbox(column, center, center, 2rem);
+   }
+}
+
+.quality-content h3,
+.quality-content p {
+   color: var(--clr-neutral-1);
+
+   @include mq(large) {
+      text-align: center;
+   }
+}
+
+.quality-content p {
+   opacity: 0.8;
+}
+
+.quality-pic {
+   @include position(relative, -10.5rem, auto, auto, auto);
+
+   @include mq(large) {
+      position: static;
+   }
+
+   @include mq(small) {
+      height: clamp(0.5rem, 10vw, 5rem);
+   }
+}
+
+
+.quality-pic img {
+   border-radius: 0.5rem;
+   position: absolute;
+   right: 0;
+
+   @include mq(large) {
+      right: 50%;
+      transform: translate(50%, -50%);
+      top: 0;
+   }
+}
+
+// headquarters
+
+.headquarters-wrapper {
+   @include flexbox(column, flex-start, flex-start, 4.5rem);
+   width: 100%;
+   max-width: 65.3125rem;
+   padding-inline: var(--extra-padding);
+   margin-bottom: 10.5rem;
+
+   @include mq(medium) {
+      padding-inline: 0;
+      margin-bottom: 9rem;
+   }
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 4.5rem);
+   }
+}
+
+.headquarter-pic {
+   @include mq(small) {
+      @include flexbox(column, center, center, 0);
+   }
+}
+
+.headquarters-title h5 {
+   color: var(--clr-neutral-2);
+}
+
+.headquarters-list {
+   width: 100%;
+   @include flexbox(row, space-between, flex-start, 0.56rem);
+
+   @include mq(small) {
+      @include flexbox(column, center, center, 5rem);
+      text-align: center;
+   }
+}
+
+.headquarter-item h3 {
+   margin-block: 3.06rem 1.31rem;
+}

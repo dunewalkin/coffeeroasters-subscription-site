@@ -35,10 +35,12 @@
 
    @include mq(large) {
       font-size: 2rem;
+      line-height: 2rem;
    }
 
    @include mq(small) {
       font-size: 1.75rem;
+      line-height: 1.75rem;
    }
 }
 
