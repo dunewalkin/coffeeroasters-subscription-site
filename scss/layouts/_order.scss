@@ -1,0 +1,130 @@
+@use "../abstracts/mixins" as *;
+
+.order-wrapper-hidden {
+   display: none;
+}
+
+.order-wrapper {
+   @include position(fixed, 50%, auto, auto, 50%);
+   display: block;
+   width: 100%;
+   max-width: 33.75rem; 
+   z-index: 100;
+   transform: translate(-50%, -50%);
+
+   @include mq(small) {
+      padding: 1.5rem;
+   }
+}
+
+.order-header {
+   border-top-left-radius: 0.5rem;
+   border-top-right-radius: 0.5rem;
+   width: 100%;
+   background: var(--clr-primary-3);
+   padding: 3rem 3.5rem 2.5rem;
+
+   @include mq(small) {
+      padding: 1.75rem 1.5rem;
+   }
+}
+
+.order-header h4 {
+   color: var(--clr-neutral-5);
+}
+
+.order-wrapper {
+   .order-content,
+   .summary-content {
+      background: var(--clr-neutral-1);
+   }
+
+   .summary-content {
+      padding: 0;
+   }
+
+   h5 {
+      color: var(--clr-neutral-2);
+   }
+
+   p {
+      margin-block: 0.44rem 2.94rem;
+      opacity: 0.8;
+
+      @include mq(small) {
+         margin-block: 0 1.5rem;
+      }
+   }
+}
+
+.order-content {
+   border-bottom-left-radius: 0.5rem;
+   border-bottom-right-radius: 0.5rem;
+   padding: 3.5rem;
+
+   @include mq(small) {
+      padding: 1.5rem;
+   }
+}
+
+.order-price {
+   @include flexbox(row, space-between, center, 0.5rem);
+
+   .hero-btn {
+      padding: 1rem 4rem;
+
+      @include mq(small) {
+         padding: 0;
+         @include width-height(100%, 3.5rem);
+         @include flexbox(row, center, center, 0);
+      }
+   }
+
+   .hero-btn h6,
+   .hero-btn span {
+
+      @include mq(small) {
+         @include flexbox(row, center, center, 0);
+      } 
+   }
+}
+
+.overlay {
+   display: none;
+   @include width-height(100%, 100vh);
+   @include position(fixed, 0, 0, 0, 0);
+   opacity: 0.5;
+   background: hsla(0, 0%, 0%, 1);
+}
+
+.overlay-visible {
+   display: block;
+   z-index: 5;
+}
+
+.not-active-btn {
+   cursor: default;
+   background: var(--clr-neutral-6);
+
+   &:hover,
+   &:focus {
+      background: var(--clr-neutral-6);
+   }
+}
+
+.total-cost-large, 
+.order-price h4 {
+   display: inline;
+
+   @include mq(small) {
+      display: none;
+   }
+}
+
+.total-cost-small {
+   display: none;
+
+   @include mq(small) {
+      display: block;
+   }
+}

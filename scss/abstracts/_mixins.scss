@@ -13,6 +13,7 @@ $breakpoints:(
    small: 37.5em,
    medium: 56.25em,
    large: 70em,
+   x-large: 76em,
 );
 
 @mixin mq($key) {
