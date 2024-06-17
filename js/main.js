@@ -223,19 +223,20 @@ function toggleGrindOption(isCapsuleSelected) {
 
 // Update Order Button State
 function updateOrderBtnState() {
-    const allActive = Array.from(optionWrappers).every(wrapper => {
-        if (isCapsuleSelected && wrapper.closest('.plan-item').classList.contains('grind-option')) {
-            return true;
-        }
-        return wrapper.classList.contains('option-wrapper-active') && wrapper.querySelector('.option-item.option-item-active');
-    });
+   const allActive = Array.from(optionWrappers).every(wrapper => {
+       if (isCapsuleSelected && wrapper.closest('.plan-item').classList.contains('grind-option')) {
+           return true;
+       }
+       return wrapper.classList.contains('option-wrapper-active') && wrapper.querySelector('.option-item.option-item-active');
+   });
 
-    orderButton.classList.toggle('not-active-btn', !allActive);
+   if (orderButton) {
+       orderButton.classList.toggle('not-active-btn', !allActive);
+   }
 }
 
 // Update Plan Navigation Classes
 function updatePlanNavClasses() {
-   console.log("Updating plan navigation classes");
    const planNavItems = document.querySelectorAll('.plan-nav-item');
 
    // Loop through each plan-nav-item
@@ -250,7 +251,7 @@ function updatePlanNavClasses() {
        }
 
        if (!planItem) {
-           console.warn(`Plan item ${index + 1} not found`);
+           
            return;
        }
 
@@ -266,11 +267,9 @@ function updatePlanNavClasses() {
        if (isSelected) {
            numElement.classList.add('plan-selected-num');
            textElement.classList.add('plan-selected-text');
-           console.log(`Plan item ${index + 1} is selected`);
        } else if (isActive && !(isCapsuleSelected && index === 3)) {
            numElement.classList.add('plan-active-num');
            textElement.classList.add('plan-active-text');
-           console.log(`Plan item ${index + 1} is active`);
        }
    });
 }

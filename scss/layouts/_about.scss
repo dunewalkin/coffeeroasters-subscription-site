@@ -35,7 +35,7 @@
    }
 }
 
-.hero-about-content h3,
+.hero-about-content h1,
 .hero-about-content p {
    color: var(--clr-neutral-1);
 
@@ -84,7 +84,7 @@
    }
 }
 
-.commitment-content h3 {
+.commitment-content h2 {
    @include mq(medium) {
       font-size: 2rem;
    }
@@ -135,7 +135,7 @@
    }
 }
 
-.quality-content h3,
+.quality-content h2,
 .quality-content p {
    color: var(--clr-neutral-1);
 

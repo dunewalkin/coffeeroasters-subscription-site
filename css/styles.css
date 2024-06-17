@@ -193,7 +193,7 @@ p {
   background: var(--clr-primary-4);
 }
 
-.hero-btn h6 {
+.hero-btn span {
   color: var(--clr-neutral-1);
   text-align: center;
 }
@@ -294,12 +294,12 @@ button {
   }
 }
 
-.hero-content h2,
+.hero-content h1,
 .hero-content p {
   color: var(--clr-neutral-1);
 }
 @media (max-width: 37.5em) {
-  .hero-content h2,
+  .hero-content h1,
   .hero-content p {
     text-align: center;
   }
@@ -503,7 +503,7 @@ button {
   }
 }
 
-.benefits-header h3 {
+.benefits-header h2 {
   color: var(--clr-neutral-1);
 }
 
@@ -642,7 +642,7 @@ button {
   }
 }
 
-.benefit-item h5,
+.benefit-item h3,
 .benefit-item p {
   color: var(--clr-neutral-1);
 }
@@ -675,17 +675,17 @@ button {
   }
 }
 
-.how-it-works-wrapper h5 {
+.how-it-works-wrapper .heading-s {
   margin-bottom: 5rem;
   color: var(--clr-neutral-2);
 }
 @media (max-width: 70em) {
-  .how-it-works-wrapper h5 {
+  .how-it-works-wrapper .heading-s {
     margin-bottom: 2.5rem;
   }
 }
 @media (max-width: 37.5em) {
-  .how-it-works-wrapper h5 {
+  .how-it-works-wrapper .heading-s {
     margin-bottom: 5rem;
   }
 }
@@ -779,32 +779,32 @@ button {
   }
 }
 
-.how-it-works-item h2 {
+.how-it-works-item .heading-l {
   color: var(--clr-primary-2);
 }
 @media (max-width: 70em) {
-  .how-it-works-item h2 {
+  .how-it-works-item .heading-l {
     font-size: 4.5rem;
     line-height: 4.5rem;
   }
 }
 @media (max-width: 37.5em) {
-  .how-it-works-item h2 {
+  .how-it-works-item .heading-l {
     text-align: center;
   }
 }
 
-.how-it-works-item h3 {
+.how-it-works-item .heading-m {
   max-width: 14rem;
   margin-block: 2.37rem 2.62rem;
 }
 @media (max-width: 70em) {
-  .how-it-works-item h3 {
+  .how-it-works-item .heading-m {
     margin-block: 2.37rem 2.75rem;
   }
 }
 @media (max-width: 37.5em) {
-  .how-it-works-item h3 {
+  .how-it-works-item .heading-m {
     text-align: center;
     margin-block: 1.5rem;
   }
@@ -869,12 +869,12 @@ button {
   }
 }
 
-.hero-about-content h3,
+.hero-about-content h1,
 .hero-about-content p {
   color: var(--clr-neutral-1);
 }
 @media (max-width: 37.5em) {
-  .hero-about-content h3,
+  .hero-about-content h1,
   .hero-about-content p {
     text-align: center;
   }
@@ -934,7 +934,7 @@ button {
 }
 
 @media (max-width: 56.25em) {
-  .commitment-content h3 {
+  .commitment-content h2 {
     font-size: 2rem;
   }
 }
@@ -999,12 +999,12 @@ button {
   }
 }
 
-.quality-content h3,
+.quality-content h2,
 .quality-content p {
   color: var(--clr-neutral-1);
 }
 @media (max-width: 70em) {
-  .quality-content h3,
+  .quality-content h2,
   .quality-content p {
     text-align: center;
   }
@@ -1159,12 +1159,12 @@ button {
   }
 }
 
-.hero-plan-content h2,
+.hero-plan-content h1,
 .hero-plan-content p {
   color: var(--clr-neutral-1);
 }
 @media (max-width: 37.5em) {
-  .hero-plan-content h2,
+  .hero-plan-content h1,
   .hero-plan-content p {
     text-align: center;
   }
