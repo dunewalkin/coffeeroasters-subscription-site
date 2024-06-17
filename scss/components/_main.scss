@@ -14,7 +14,6 @@ body {
 
    @include mq(small) {
       padding-inline: var(--inline-small); 
-      // padding-top: 6rem;
    }
 }
 

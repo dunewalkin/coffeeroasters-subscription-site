@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --clr-primary-1: hsla(179, 81%, 29%, 1);
   --clr-primary-2: hsla(25, 95%, 86%, 1);
@@ -1534,7 +1533,7 @@ button {
     align-items: center;
     gap: 2rem;
     padding-top: 2.5rem;
-    transition: opacity 0.5s ease; /* Добавляем transition для свойства opacity */
+    transition: opacity 0.5s ease;
     opacity: 0;
   }
 }

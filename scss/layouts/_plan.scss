@@ -23,7 +23,6 @@
 
 .hero-plan-content {
    width: 50%;
-   // max-width: 31rem;
    @include flexbox(column, flex-start, flex-start, 2rem);
 
    @include mq(medium) {
@@ -175,8 +174,6 @@
 
 .question-wrapper {
    @include flexbox(row, space-between, center, 1.5rem);
-   // margin-bottom: 3.5rem;
-   // cursor: pointer;
 }
 
 .question-wrapper h3 {

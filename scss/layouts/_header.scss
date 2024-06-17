@@ -43,7 +43,7 @@
       @include width-height(100%, 100vh);
       @include flexbox(column, flex-start, center, 2rem);
       padding-top: 2.5rem;
-      transition: opacity .5s ease; /* Добавляем transition для свойства opacity */
+      transition: opacity .5s ease; 
       opacity: 0;
    }
 
